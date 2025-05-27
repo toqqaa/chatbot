@@ -1,4 +1,4 @@
-#!/home/toqa/catkin_ws/src/noor_chatbot/venv_speech/bin/python
+#!/usr/bin/env python3.9
 import os
 import rospy
 import pygame

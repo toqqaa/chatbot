@@ -1,4 +1,4 @@
-#!/home/toqa/catkin_ws/src/noor_chatbot/venv_speech/bin/python
+#!/usr/bin/env python3.9
 
 import os
 import rospy
@@ -8,7 +8,7 @@ import wave
 from google.cloud import speech
 
 # Set path to your Google credentials JSON file
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/toqa/catkin_ws/src/noor_chatbot/scripts/apiKey.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/jetson/catkin_ws/src/chatbot/noor_chatbot/scripts/apiKey.json"
 
 # Audio recording parameters
 FORMAT = pyaudio.paInt16
@@ -16,7 +16,7 @@ CHANNELS = 1
 RATE = 16000  # Use 16000 Hz (recommended for Google STT)
 CHUNK = 1024
 RECORD_SECONDS = 5
-TEMP_FILE = "/home/toqa/catkin_ws/src/noor_chatbot/scripts/mic_input.wav"
+TEMP_FILE = "/home/jetson/catkin_ws/src/chatbot/noor_chatbot/scripts/mic_input.wav"
 
 class SpeechToTextNode:
     def __init__(self):

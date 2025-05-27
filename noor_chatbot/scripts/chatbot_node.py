@@ -1,4 +1,4 @@
-#!/home/toqa/catkin_ws/src/noor_chatbot/venv_noor310/bin/python
+#!/usr/bin/env python3.9
 
 import rospy
 from std_msgs.msg import String
