@@ -1,0 +1,17 @@
+<launch>
+  <!-- Delay start of s2t.py until t2s.py is fully initialized -->
+
+  <!-- Start Text-to-Speech Node first -->
+  <node name="t2s_node" pkg="noor_chatbot" type="t2s.py" output="screen"/>
+
+  <!-- Delay chatbot startup slightly to ensure tts is ready -->
+  <node name="chatbot_node" pkg="noor_chatbot" type="chatbot_node.py" output="screen">
+    <param name="start_delay" value="1.0"/>
+  </node>
+
+  <!-- Start Speech-to-Text Node with launch delay -->
+  <node name="s2t_node" pkg="noor_chatbot" type="s2t.py" output="screen">
+    <param name="start_delay" value="2.0"/>
+  </node>
+</launch>
+

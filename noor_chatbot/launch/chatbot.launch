@@ -1,0 +1,3 @@
+<launch>
+  <node name="noor_chatbot" pkg="noor_chatbot" type="chatbot_node.py" output="screen"/>
+</launch>
